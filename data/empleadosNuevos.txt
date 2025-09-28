@@ -1,0 +1,4 @@
+dni;nombre;sexo;categoria;anyos
+12345678A;Jesús Alejandro;M;4;7
+45763890R;Ana Medina;F;6;9
+57684398H;Antonio Verdugo;M;9;20

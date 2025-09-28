@@ -1,0 +1,7 @@
+dni;nombre;sexo;categoria;anyos
+12345678A;Jesús Alejandro;M;5;25
+32000031R;Ada Lovelace;F;7;2
+32000032G;James Cosling;M;6;12
+45763890R;Ana Castro;F;7;9
+53968754G;Antonio Castro;M;9;20
+57684398H;Antonio Verdugo;M;8;15
