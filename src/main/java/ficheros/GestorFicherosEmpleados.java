@@ -118,7 +118,7 @@ public class GestorFicherosEmpleados {
 	}
 	
 	public int actualizarEmpleadosModeloTxt(List<EmpleadoModelo> empleados) {
-		String ruta = "data/emplea.txt";
+		String ruta = "data/empleados.txt";
 		String cabecera = "dni;nombre;sexo;categoria;anyos";
 		int filasEscritas = 0;
 
