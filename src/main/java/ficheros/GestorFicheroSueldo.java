@@ -34,6 +34,12 @@ public class GestorFicheroSueldo {
 		}
 	}
 
+	// He creado este método principalmente porque en laparte 5 se trabaja con
+	// 'EmpleadoModelo'
+	// podría haber evitado crear metodos iguales para distintos objetos, habiendo
+	// creado un metodo que convierta un empleado en EmpladoModelo
+	// pero he preferido hacerlo de esta manera para no llamar a un metodo de
+	// conversion todo el tiempo practicamente.
 	public int escribirSueldosDatEmpleadosModelo(List<EmpleadoModelo> empleados) {
 		String ruta = "data/sueldos.dat";
 		int filasEscritas = 0;

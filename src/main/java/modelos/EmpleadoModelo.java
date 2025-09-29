@@ -4,6 +4,11 @@ import excepciones.EmpleadoDataException;
 import excepciones.FormatoDniException;
 import excepciones.FormatoSexoException;
 
+/**
+ * Aunque ya tenemos una clase Empleado creada desde la parte 1, yo he creado
+ * esta clase para representar el modelo de la tabla 'Empleados' de la BBDD
+ */
+
 public class EmpleadoModelo {
 
 	private Integer id;
@@ -76,9 +81,8 @@ public class EmpleadoModelo {
 
 	@Override
 	public String toString() {
-	    return nombre + " | " + dni + " | " + sexo + " | Categoría: " + categoria + " | Años: " + anyos;
+		return nombre + " | " + dni + " | " + sexo + " | Categoría: " + categoria + " | Años: " + anyos;
 	}
-
 
 	public void comprobarDni(String dni) throws FormatoDniException {
 

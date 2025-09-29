@@ -14,7 +14,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Esta ventana es la principal de todas, por eso extiende de Application La he
+ * creado principalmente para darle un poco más de profesionalidad
+ */
 public class VentanaLogin extends Application {
+
+	// En todas las ventanas declaro los atributos fuera del constructor, para poder
+	// tratarlos en el controlador.
 
 	private Label lblTitulo = new Label("¡¡Bienvenido a Gestion de Nóminas!!");
 	private Label lblUsuario = new Label("Usuario: ");
@@ -24,11 +31,13 @@ public class VentanaLogin extends Application {
 	private PasswordField txtContrasenya = new PasswordField();
 
 	private Button btnEntrar = new Button("Acceder");
-	
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
+		// Lo primero que hago es crear un controlador de la ventana del Login y le paso
+		// la ventana y el stage para que si el usuario se registra correctamente, se
+		// cierre la ventana.
 		ControladorVentanaLogin ctrl = new ControladorVentanaLogin(this, primaryStage);
 		ctrl.prepararControlador();
 

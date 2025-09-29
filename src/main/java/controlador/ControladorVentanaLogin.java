@@ -5,6 +5,14 @@ import vista.VentanaAdmin;
 import vista.VentanaLogin;
 import vista.alertas.Alertas;
 
+/**
+ * Este controlador es bastante simple, basicamente recoge la ventana y el
+ * Stage, tiene su método 'prepararControlador' que en este caso lo uso para el
+ * evento que quiero que ocurra al presionar el botón, que básicamente es un
+ * método que comprueba los campos recogidos y si la contraseña es 'fdellea600'
+ * se abre la ventana admin con la opciones
+ */
+
 public class ControladorVentanaLogin {
 	private final VentanaLogin vista;
 	private final Stage stage;

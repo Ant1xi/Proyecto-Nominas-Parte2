@@ -13,6 +13,13 @@ import modelos.EmpleadoModelo;
 import vista.VentanaListarEmpleados;
 import vista.alertas.Alertas;
 
+/**
+ * Este controlador es simple, simplemente se encarga de abrir la ventana con la
+ * lista cargada, se podria hacer más profesiona si la ventana tuviera un método
+ * mostrar(); que haga que la ventana sea visible si la lista se ha podido
+ * llenar, pero he preferido dejarlo así. (El proyecto puedo perfeccionarlo
+ * mucho más, pero no tengo tanto tiempo)
+ */
 public class ControladorVentanaListarEmpleados {
 
 	private VentanaListarEmpleados ventana;

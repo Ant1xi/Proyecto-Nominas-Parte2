@@ -4,6 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Esta clase es una libreria para crear y cerrar las conexiiones desde la BBDD
+ * He creado todas las conexiones que pueden hacerme falta, aunque he podido
+ * hacer transacciones, he preferido usar siempre conexiones simples con try
+ * (with resources) para ni siquiera tener que llamar al método que la cierra en
+ * el finally
+ */
+
 public final class DataBaseConnection {
 	private static final String URL = "jdbc:mariadb://localhost:3306/gestor_nominas";
 	private static final String USER = "nominas_user";
@@ -22,7 +30,7 @@ public final class DataBaseConnection {
 			try {
 				c.close();
 			} catch (Exception e) {
-				System.out.println("Error al cerrar conexión: "+e.getMessage());
+				System.out.println("Error al cerrar conexión: " + e.getMessage());
 				e.printStackTrace();
 			}
 	}
@@ -38,7 +46,7 @@ public final class DataBaseConnection {
 			try {
 				c.commit();
 			} catch (SQLException e) {
-				System.out.println("Error al cerrar conexión: "+e.getMessage());
+				System.out.println("Error al cerrar conexión: " + e.getMessage());
 				e.printStackTrace();
 			}
 			closeConnection(c);
@@ -50,7 +58,7 @@ public final class DataBaseConnection {
 			try {
 				c.rollback();
 			} catch (SQLException e) {
-				System.out.println("Error al hacer rollback: "+e.getMessage());
+				System.out.println("Error al hacer rollback: " + e.getMessage());
 				e.printStackTrace();
 			}
 			closeConnection(c);

@@ -63,6 +63,8 @@ public class ControladorSubVentanaModificarEmpleado {
 
 			if (filasModificadas > 0) {
 
+				// Aquí recojo el índice de la lista que ha sido modificado para refrescar
+				// despues de la operación
 				int index = lista.getSelectionModel().getSelectedIndex();
 
 				if (index >= 0) {

@@ -15,6 +15,15 @@ import excepciones.PersonaDataException;
 import laboral.Empleado;
 import modelos.EmpleadoModelo;
 
+/**
+ * He creado esta clase para el tratamiento de los ficheros, realmente en el
+ * proyecto acabado los controladores trabajan solo con empleados.txt ya que
+ * empleadosNuevos.txt es usado solo en para realizar un punto de la parte 2,
+ * Ese punto está realizado en la clase CalculaNominas.java, que tiene su método
+ * main, pero como yo he usado JavaFx entonces mi clase principal es una
+ * ventana.
+ */
+
 public class GestorFicherosEmpleados {
 
 	public List<Empleado> leerEmpleadosTxt() {
@@ -51,7 +60,13 @@ public class GestorFicherosEmpleados {
 
 		return listaEmpleados;
 	}
-	
+
+	// He creado este método principalmente porque en laparte 5 se trabaja con
+	// 'EmpleadoModelo'
+	// podría haber evitado crear metodos iguales para distintos objetos, habiendo
+	// creado un metodo que convierta un empleado en EmpladoModelo
+	// pero he preferido hacerlo de esta manera para no llamar a un metodo de
+	// conversion todo el tiempo practicamente.
 	public List<EmpleadoModelo> leerEmpleadosNuevosTxt() {
 		List<EmpleadoModelo> listaEmpleados = new ArrayList<>();
 		String ruta = "data/empleadosNuevos.txt";
@@ -108,7 +123,7 @@ public class GestorFicherosEmpleados {
 				filasEscritas++;
 				bw.newLine();
 			}
-			
+
 			return filasEscritas;
 
 		} catch (IOException e) {
@@ -116,7 +131,13 @@ public class GestorFicherosEmpleados {
 			return filasEscritas;
 		}
 	}
-	
+
+	// He creado este método principalmente porque en laparte 5 se trabaja con
+	// 'EmpleadoModelo'
+	// podría haber evitado crear metodos iguales para distintos objetos, habiendo
+	// creado un metodo que convierta un empleado en EmpladoModelo
+	// pero he preferido hacerlo de esta manera para no llamar a un metodo de
+	// conversion todo el tiempo practicamente.
 	public int actualizarEmpleadosModeloTxt(List<EmpleadoModelo> empleados) {
 		String ruta = "data/empleados.txt";
 		String cabecera = "dni;nombre;sexo;categoria;anyos";
@@ -138,7 +159,7 @@ public class GestorFicherosEmpleados {
 				filasEscritas++;
 				bw.newLine();
 			}
-			
+
 			System.out.println("Archivo " + ruta + " creado correctamente.");
 			return filasEscritas;
 

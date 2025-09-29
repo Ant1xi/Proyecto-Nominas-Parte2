@@ -3,6 +3,11 @@ package modelos;
 import excepciones.FormatoDniException;
 import excepciones.NominaDataException;
 
+/**
+ * Aunque ya tenemos una clase Nomina creada desde la parte 1, yo he creado
+ * esta clase para representar el modelo de la tabla 'Nominas' de la BBDD
+ */
+
 public class NominaModelo {
 
 	private Integer idNomina;

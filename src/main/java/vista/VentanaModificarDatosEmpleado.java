@@ -41,6 +41,8 @@ public class VentanaModificarDatosEmpleado {
 		stageVentanaModificarEmpleados.show();
 	}
 
+	// Este método lo he creado para poder cargar la lista desde el controlador
+	// cuando se abra la ventana
 	public void setEmpleados(ObservableList<EmpleadoModelo> listaEmpleados) {
 		lista.setItems(listaEmpleados);
 	}

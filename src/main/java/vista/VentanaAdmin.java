@@ -9,6 +9,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Esta ventana la he crado para gestionar las opciones que puede elegir el
+ * usuario, la idea es que sea una ventana de referencia que siempre esté
+ * disponible.
+ */
 public class VentanaAdmin {
 
 	private Button btnListarEmpleados = new Button("LISTAR EMPLEADOS");
@@ -29,6 +34,8 @@ public class VentanaAdmin {
 				btnRecalcularSueldoTodos, btnCopiaSeguridadFicheros };
 
 		for (var b : botones) {
+			// Ancho de los botones para que todos sean iguales y quede más bonito
+			// visualmente
 			b.setPrefWidth(300);
 		}
 

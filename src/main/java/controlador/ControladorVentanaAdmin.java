@@ -9,10 +9,15 @@ import vista.VentanaModificarDatosEmpleado;
 import vista.VentanaRecalcularSueldoEmpleado;
 import vista.VentanaRecalcularSueldosEmpleado;
 
+/**
+ * ControladorVentanaAdmin Gestiona todos los eventos que ocurren al presionar
+ * cada una de las opciones, basicamente crea las ventanas y a sus respectivos
+ * controladores que reciben esa ventana que se ha creado
+ */
 public class ControladorVentanaAdmin {
 
 	private final VentanaAdmin vista;
-	
+
 	public ControladorVentanaAdmin(VentanaAdmin vista, Stage stage) {
 		this.vista = vista;
 	}
@@ -70,7 +75,7 @@ public class ControladorVentanaAdmin {
 		VentanaCopiaSeguridadFicheros vistaCopiaSeguridadFicheros = new VentanaCopiaSeguridadFicheros();
 		ControladorVentanaCopiaSeguridadFicheros ctrlCopiaSeguridadFicheros = new ControladorVentanaCopiaSeguridadFicheros(
 				vistaCopiaSeguridadFicheros, vistaCopiaSeguridadFicheros.getStageVentanaRecalcularSueldosEmpleado());
-		
+
 		ctrlCopiaSeguridadFicheros.prepararControlador();
 	}
 
